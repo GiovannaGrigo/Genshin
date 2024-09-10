@@ -1,0 +1,69 @@
+create database genshin;
+use genshin;
+
+create table personagem(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(30) NOT NULL UNIQUE,
+	descricao VARCHAR(500),
+    imagem varchar(300),
+    elementoId INT UNSIGNED NOT NULL,
+    armaId INT UNSIGNED NOT NULL
+);
+
+create table elemento(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(30) NOT NULL UNIQUE,
+    cor VARCHAR(30) NOT NULL
+);
+
+create table arma(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(30) NOT NULL UNIQUE
+);
+
+alter table personagem add constraint fk_personagem_elemento
+	foreign key (elementoId) references elemento(id);
+    
+alter table personagem add constraint fk_personagem_arma
+	foreign key(armaId) references arma(id);
+    
+insert into elemento(nome, cor) values
+("Anemo","rgb(29, 180, 147)"),
+("Geo","rgb(255, 165, 0)"),
+("Electro","rgb(106, 90, 205)"),
+("Dendro","rgb(25, 225, 57)"),
+("Cryo","rgb(0, 255, 255)"),
+("Pyro","rgb(0, 255, 255)"),
+("Hydro","rgb(0, 204, 255)");
+
+insert into arma(nome) values
+("Espada"),
+("Espadão"),
+("Catalisador"),
+("Arco"),
+("Lança");
+
+insert into personagem(nome, descricao, imagem, elementoId, armaId) values
+("Kaeya",
+"Kaeya é um Capitão de Cavalaria dos Cavaleiros de Favonius. Ele é muito estimado pelo povo de Mondstadt - mesmo com todas as suas excentricidades e segredos.",
+"\\img\\Personagem\\01.png",
+5,
+1),
+
+("Razor",
+"Razor é uma pessoa geralmente bem-humorada que considera sua matilha de lobos sua família. Ele busca vingança contra aqueles que machucaram sua família, mas geralmente considera as poucas pessoas que encontra na floresta como amigos. Razor sai de seu caminho para proteger aqueles que ele vê em perigo, até mesmo deixando vários javalis - o jantar dele e de sua matilha - fugirem para proteger o Viajante e Paimon.",
+"\\img\\Personagem\\02.png",
+3,
+2),
+
+("Diluc",
+"Nascido na influente Família Ragnvindr, Diluc é o atual proprietário do Adega do Alvorecer e um nobre de alta estima na sociedade de Mondstadt. Embora um incidente anterior o tenha levado a se separar dos Cavaleiros de Favonius, ele continua a proteger Mondstadt à sua própria maneira.",
+"\\img\\Personagem\\03.png",
+6,
+2),
+
+("Zhongli",
+"Zhongli é um consultor da Casa Funerária de Wangsheng que aparece pela primeira vez nas Missões do Arconte Capítulo 1, Ato 2: Corpos que Partiram para Longe",
+"\\img\\Personagem\\04.png",
+2,
+5);
