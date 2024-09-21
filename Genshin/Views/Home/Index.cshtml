@@ -28,7 +28,7 @@
         @foreach (Personagem personagem in Model.Personagens)
         {
             <!-- Card Pokemon - Inicio -->
-            <div class="col poke">
+            <div class="col poke @string.Join(' ', personagem.Elemento.Nome)">
                 <a asp-action="Details" asp-route-id="@personagem.Id" class="text-decoration-none">
                     <div class="card" style="background-color: @BackgroundColor(personagem.Elemento.Cor) ">
                         <img src="@personagem.Imagem" class="card-img-top" alt="@personagem.Nome" />
