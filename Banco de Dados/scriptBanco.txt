@@ -28,13 +28,13 @@ alter table personagem add constraint fk_personagem_arma
 	foreign key(armaId) references arma(id);
     
 insert into elemento(nome, cor) values
-("Anemo","rgb(29, 180, 147)"),
-("Geo","rgb(255, 165, 0)"),
-("Electro","rgb(106, 90, 205)"),
-("Dendro","rgb(25, 225, 57)"),
-("Cryo","rgb(0, 255, 255)"),
-("Pyro","rgb(0, 255, 255)"),
-("Hydro","rgb(0, 204, 255)");
+("Anemo","rgba(29, 180, 147, 1)"),
+("Geo","rgba(255, 165, 0, 1)"),
+("Electro","rgba(106, 90, 205, 1)"),
+("Dendro","rgba(25, 225, 57, 1)"),
+("Cryo","rgba(0, 255, 255, 1)"),
+("Pyro","rgba(255, 0, 0, 1)"),
+("Hydro","rgba(0, 204, 255, 1)");
 
 insert into arma(nome) values
 ("Espada"),
