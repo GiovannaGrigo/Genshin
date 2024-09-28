@@ -66,4 +66,33 @@ insert into personagem(nome, descricao, imagem, elementoId, armaId) values
 "Zhongli é um consultor da Casa Funerária de Wangsheng que aparece pela primeira vez nas Missões do Arconte Capítulo 1, Ato 2: Corpos que Partiram para Longe",
 "\\img\\Personagem\\04.png",
 2,
-5);
+5),
+
+("Alhaitham",
+"O atual Escriba da Academia de Sumeru, um homem de grande inteligência e talento. Vive sua vida livre e despreocupado, sendo uma pessoa muito difícil de se encontrar.",
+"\\img\\Personagem\\05.png",
+4,
+1
+),
+
+("Arlecchino",
+"Arlecchino, também conhecida pelo apelido de Serva é um personagem Pyro jogável em Genshin Impact.
+Ela é a Quarta dos Onze Mensageiros dos Fatui, Ela faz sua primeira aparição durante Teaser de Interlúdio: Capítulo Teyvat: Distrações de uma Noite de Inverno ao lado de seus colegas Mensageiros.",
+"\\img\\Personagem\\06.png",
+6,
+5
+),
+
+("Nahida",
+"Nahida é uma personagem Dendro jogável em Genshin Impact. Ela é o corpo mortal da Lorde Menor Kusanali, atual Arconte Dendro.",
+"\\img\\Personagem\\07.png",
+4,
+3
+),
+
+("Neuvilette",
+"Neuvillette é o Iudex de Fontaine , e o líder do Fantasma de Marechaussee. Embora Neuvillette cumpra as regras do tribunal com a maior reverência, ele é bastante indiferente ao lidar com as emoções humanas e muitas vezes se distancia dos olhos do público.",
+"\\img\\Personagem\\08.png",
+7,
+3
+);
