@@ -30,7 +30,7 @@
             <div class="col perso @string.Join(' ', personagem.Elemento.Nome)">
                 <a asp-action="Details" asp-route-id="@personagem.Id" class="text-decoration-none">
                     <div class="card" style="background-color: @BackgroundColor(personagem.Elemento.Cor) ">
-                        <img src="@personagem.Imagem" class="card-img-top" alt="@personagem.Nome" />
+                        <img src="@personagem.Imagem" class="card-img-top"  alt="@personagem.Nome" />
                         <div class="card-body">
                             <h3 class="card-title text-white">@personagem.Nome</h3>
                             <div class="d-flex justify-content-between align-items-center">
